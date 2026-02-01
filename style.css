@@ -1,0 +1,139 @@
+:root{
+  --bg: #f5c7d8;          /* soft pink background */
+  --card: #f2f2f2;        /* light card */
+  --text: #151515;
+  --muted: #6b6b6b;
+  --yes: #d81b60;         /* hot pink button */
+  --yes-hover: #c2185b;
+  --shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.page{
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card{
+  width: min(820px, 92vw);
+  min-height: 420px;
+  background: var(--card);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 34px 28px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon{
+  display: grid;
+  place-items: center;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.title{
+  margin: 0 0 26px;
+  text-align: center;
+  font-size: clamp(26px, 3.4vw, 46px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.buttons{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 8px;
+  /* this gives the No button “space” to run around */
+  min-height: 120px;
+}
+
+.btn{
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .12s ease, background .12s ease;
+  user-select: none;
+}
+
+.btn:active{ transform: translateY(1px) scale(.99); }
+
+.btn-yes{
+  background: var(--yes);
+  color: #fff;
+  padding: 18px 56px;
+  border-radius: 999px;
+  font-size: 28px;
+  box-shadow: 0 12px 24px rgba(216,27,96,.25);
+}
+
+.btn-yes:hover{ background: var(--yes-hover); }
+
+.btn-no{
+  background: #e6e6e6;
+  color: #222;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 16px;
+
+  /* important: allow JS to reposition it */
+  position: absolute;
+  right: 140px;
+}
+
+.hint{
+  margin: 10px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* YAY screen */
+.yay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(242,242,242,.96);
+  text-align: center;
+}
+
+.yay h2{
+  margin: 0 0 6px;
+  font-size: clamp(32px, 4vw, 54px);
+}
+
+.yay p{
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.yay img{
+  width: min(360px, 80vw);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
+  margin-bottom: 16px;
+}
+
+.btn-again{
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+}

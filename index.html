@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="card" id="card">
+        <!-- Cute icon (SVG) -->
+        <div class="icon" aria-hidden="true">
+          <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="42" r="28" fill="#F2B38C"/>
+            <path d="M24 27 L33 20 L31 31 Z" fill="#E9A77D"/>
+            <path d="M60 27 L51 20 L53 31 Z" fill="#E9A77D"/>
+            <circle cx="34" cy="44" r="3.2" fill="#1A1A1A"/>
+            <circle cx="50" cy="44" r="3.2" fill="#1A1A1A"/>
+            <path d="M42 47 C40.8 47 39.8 48 39.8 49.2 C39.8 51.2 42 53 42 53 C42 53 44.2 51.2 44.2 49.2 C44.2 48 43.2 47 42 47Z" fill="#FF5A8A"/>
+            <!-- heart -->
+            <path d="M62 18 C58.5 18 56 20.6 56 24.1 C56 30 62 33.5 62 33.5 C62 33.5 68 30 68 24.1 C68 20.6 65.5 18 62 18Z" fill="#FF2D6D"/>
+          </svg>
+        </div>
+
+        <h1 class="title">
+          <span id="name">All the girls seeing this</span> will you be Jomiloju's valentine?🥹
+        </h1>
+
+        <div class="buttons">
+          <button class="btn btn-yes" id="yesBtn">Yes</button>
+
+          <!-- this one moves around -->
+          <button class="btn btn-no" id="noBtn" type="button">No</button>
+        </div>
+
+        <p class="hint">“No” seems a bit shy 😈</p>
+
+        <!-- success screen (hidden until Yes) -->
+        <div class="yay" id="yayScreen" hidden>
+          <h2>YAY!! 💖</h2>
+          <p>See you on Valentine’s 😌</p>
+          <img
+            alt="Cute celebration"
+            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJrZ2p6b2V4Y2Z6bHh3ZzZkZzF0cWZpZ2x5Z2h5eHk2bGJ4dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6Zt481isNVuQI1l6/giphy.gif"
+          />
+          <button class="btn btn-again" id="againBtn" type="button">Do it again</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
